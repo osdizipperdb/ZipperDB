@@ -1,6 +1,6 @@
-##ZipperDB
+ZipperDB
 
-##Compiling ZipperDB
+Compiling ZipperDB
 
 for release:
 
