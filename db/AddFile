@@ -1,0 +1,21 @@
+db_impl.cc:546:    edit->AddFile(level, meta.number, meta.file_size,
+version_set.cc:673:    for (size_t i = 0; i < edit->compact_pointers_.size(); i++) {
+version_set.cc:674:      const int level = edit->compact_pointers_[i].first;
+version_set.cc:676:          edit->compact_pointers_[i].second.Encode().ToString();
+version_set.cc:680:    const VersionEdit::DeletedFileSet& del = edit->deleted_files_;
+version_set.cc:690:    for (size_t i = 0; i < edit->new_files_.size(); i++) {
+version_set.cc:691:      const int level = edit->new_files_[i].first;
+version_set.cc:692:      FileMetaData* f = new FileMetaData(edit->new_files_[i].second);
+version_set.cc:827:  if (edit->has_log_number_) {
+version_set.cc:828:    assert(edit->log_number_ >= log_number_);
+version_set.cc:829:    assert(edit->log_number_ < next_file_number_);
+version_set.cc:831:    edit->SetLogNumber(log_number_);
+version_set.cc:834:  if (!edit->has_prev_log_number_) {
+version_set.cc:835:    edit->SetPrevLogNumber(prev_log_number_);
+version_set.cc:838:  edit->SetNextFile(next_file_number_);
+version_set.cc:839:  edit->SetLastSequence(last_sequence_);
+version_set.cc:858:    edit->SetNextFile(next_file_number_);
+version_set.cc:873:      edit->EncodeTo(&record);
+version_set.cc:895:    log_number_ = edit->log_number_;
+version_set.cc:896:    prev_log_number_ = edit->prev_log_number_;
+version_set.cc:1500:      edit->DeleteFile(level_ + which, inputs_[which][i]->number);
